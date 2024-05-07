@@ -1,0 +1,60 @@
+```markdown
+# Asistente de Código con OpenAI
+
+Este script permite crear un asistente personal para tareas relacionadas con código usando la API de OpenAI. Utiliza la biblioteca `Streamlit` para crear un frontend interactivo que facilita la interacción con el asistente.
+
+## Requisitos Previos
+
+Para ejecutar este script, necesitas tener:
+
+- Python 3.7 o superior
+- Una clave de API de OpenAI
+- Bibliotecas necesarias instaladas (consulta la sección de "Instalación")
+
+## Instalación
+
+1. Clona este repositorio o descarga el script a tu máquina local.
+
+2. Crea un entorno virtual y activa:
+
+   ```bash
+   python -m venv codehelpervenv
+   source codehelpervenv/bin/activate  # Para sistemas Unix
+   venv\Scripts\activate  # Para sistemas Windows
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Configuración
+
+1. Dentro de `keys.py`, define tu clave de API de OpenAI:
+
+   ```python
+   OPENAI_API_KEY = "tu-api-key-aquí"
+   ```
+
+2. Si ya tienes un ID de asistente y un ID de Thread, agréguelos al script principal (indicaciones detalladas deben darse en el script). De lo contrario, el script creará un nuevo asistente y un nuevo hilo.
+
+## Uso
+
+Para ejecutar el script y abrir el frontend con `Streamlit`, utiliza el siguiente comando:
+
+```bash
+streamlit run main.py
+```
+
+Este comando abrirá una interfaz web interactiva. Desde ahí, podrás interactuar con tu asistente de código, enviarle preguntas o instrucciones, y recibir respuestas en tiempo real.
+
+## Notas Adicionales
+
+- Si estás creando un asistente por primera vez, el script debería crear uno automáticamente y proporcionarte un ID de asistente y un ID de hilo.
+- Guarda estos IDs en un lugar seguro para futuras ejecuciones.
+- El asistente y el hilo creado estarán asociados con tu clave de API, por lo que es importante mantenerla confidencial.
+
+## Contribuciones
+
+Si tienes sugerencias o mejoras para el script, estás invitado a contribuir. Por favor, abre un issue o envía un pull request.
